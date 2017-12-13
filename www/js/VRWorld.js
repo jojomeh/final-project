@@ -1,6 +1,6 @@
 (function (global) {
   'use strict';
-  
+
   var scene, renderer;
   var element, $container;
 
@@ -28,7 +28,7 @@
     camera.position.set(-20, 20, 40);
     scene.add(camera);
 
-    vrCamera = new THREE.PerspectiveCamera(75, 1, 0.001, 300);
+    vrCamera = new THREE.PerspectiveCamera(75, 1, 0.001, 2000);
     vrCamera.target = new THREE.Vector3(0, 0, 0);
     vrCamera.position.set(0, 10, 0);
     scene.add(vrCamera);
@@ -87,7 +87,7 @@
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    
+
     vrCamera.aspect = width / height;
     vrCamera.updateProjectionMatrix();
 
@@ -97,7 +97,7 @@
 
   function fullscreen() {
     var container = $container[0];
-    
+
     if (container.requestFullscreen) {
       container.requestFullscreen();
     } else if (container.msRequestFullscreen) {
@@ -132,7 +132,7 @@
 
   function animate () {
     update(clock.getDelta());
-    
+
     if (renderVR) {
       stereoEffect.render(scene, vrCamera);
     } else {

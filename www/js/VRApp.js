@@ -8,7 +8,7 @@
     VRWorld.scene.add(gridHelper);
 
     cameraHelper = new THREE.CameraHelper(VRWorld.vrCamera);
-    VRWorld.scene.add(cameraHelper);
+    //VRWorld.scene.add(cameraHelper);
 
     lightSetup();
     setupFondo();
@@ -114,7 +114,7 @@
   }
 
   function onUpdate() {
-     cameraHelper.update();
+cameraHelper.update();
   }
 
     function onLoadRobot (objectLoaded) {
@@ -136,7 +136,7 @@
     }
 
     function onUpdate() {
-       cameraHelper.update();
+   cameraHelper.update();
     }
 
 function onLoadFem (objectLoaded) {
@@ -156,7 +156,7 @@ function onLoadFem (objectLoaded) {
 }
 
 function onUpdate() {
-   cameraHelper.update();
+ cameraHelper.update();
 }
 
 
@@ -179,7 +179,7 @@ function onUpdate() {
     }
 
     function onUpdate() {
-       cameraHelper.update();
+      cameraHelper.update();
     }
       //----------space
 
